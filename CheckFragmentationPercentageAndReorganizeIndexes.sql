@@ -7,5 +7,5 @@ FROM sys.dm_db_index_physical_stats (DB_ID(), NULL, NULL, NULL, NULL) AS ips
 JOIN sys.indexes AS i ON ips.OBJECT_ID = i.OBJECT_ID AND ips.index_id = i.index_id
 WHERE OBJECT_NAME(ips.OBJECT_ID) = 'YOUR_TABLE_NAME'; -- replace by your table name
 
-ALTER INDEX ALL ON AircraftsAvailabilityLocations
+ALTER INDEX ALL ON YOUR_TABLE_NAME -- replace by your table name
 REORGANIZE;
