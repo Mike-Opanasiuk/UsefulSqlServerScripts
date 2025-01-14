@@ -11,4 +11,4 @@ ALTER INDEX ALL ON YOUR_TABLE_NAME -- replace by your table name
 REORGANIZE; -- if avg_fragmentation_in_percent is 5-30%
 
 ALTER INDEX ALL ON YOUR_TABLE_NAME -- replace by your table name
-REORGANIZE; -- if avg_fragmentation_in_percent is > 30%
+REBUILD; -- if avg_fragmentation_in_percent is > 30%
