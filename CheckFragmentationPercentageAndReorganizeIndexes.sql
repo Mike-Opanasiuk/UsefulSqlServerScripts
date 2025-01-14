@@ -8,4 +8,7 @@ JOIN sys.indexes AS i ON ips.OBJECT_ID = i.OBJECT_ID AND ips.index_id = i.index_
 WHERE OBJECT_NAME(ips.OBJECT_ID) = 'YOUR_TABLE_NAME'; -- replace by your table name
 
 ALTER INDEX ALL ON YOUR_TABLE_NAME -- replace by your table name
-REORGANIZE;
+REORGANIZE; -- if avg_fragmentation_in_percent is 5-30%
+
+ALTER INDEX ALL ON YOUR_TABLE_NAME -- replace by your table name
+REORGANIZE; -- if avg_fragmentation_in_percent is > 30%
